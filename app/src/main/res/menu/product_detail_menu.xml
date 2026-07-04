@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Ikon Wishlist -->
+    <item
+        android:id="@+id/action_wishlist"
+        android:icon="@drawable/ic_favorite_border"
+        android:title="Wishlist"
+        app:showAsAction="always" />
+
+    <!-- Ikon Share -->
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share"
+        android:title="Bagikan"
+        app:showAsAction="ifRoom" />
+
+    <!-- Ikon Keranjang dengan Badge -->
+    <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="Keranjang"
+        app:showAsAction="always" />
+
+</menu>

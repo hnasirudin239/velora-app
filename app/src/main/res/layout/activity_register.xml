@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="24dp">
+
+    <!-- ===== BACK BUTTON ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <ImageButton
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_back"
+            android:tint="#1F2937"
+            android:padding="4dp"
+            android:contentDescription="Kembali" />
+    </LinearLayout>
+
+    <!-- ===== HERO & WELCOME ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <!-- Logo -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="14dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@mipmap/n"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="#1A73E8"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <!-- Welcome Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buat Akun Baru"
+            android:textColor="#111827"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bergabung dan nikmati pengalaman berbelanja terbaik"
+            android:textColor="#6B7280"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- ===== REGISTER FORM ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- Nama Lengkap -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="14dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_user_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_user"
+                    android:tint="#9CA3AF"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="14dp" />
+
+                <EditText
+                    android:id="@+id/et_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="46dp"
+                    android:paddingVertical="14dp"
+                    android:hint="Nama Lengkap"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/bg_login_input"
+                    android:textSize="15sp"
+                    android:textColor="#1F2937" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Email -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="14dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_email_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_email"
+                    android:tint="#9CA3AF"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="14dp" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="46dp"
+                    android:paddingVertical="14dp"
+                    android:hint="Alamat Email"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/bg_login_input"
+                    android:textSize="15sp"
+                    android:textColor="#1F2937" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Nomor Telepon (Opsional) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="14dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_phone_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_phone"
+                    android:tint="#9CA3AF"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="14dp" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="46dp"
+                    android:paddingVertical="14dp"
+                    android:hint="Nomor Telepon (Opsional)"
+                    android:inputType="phone"
+                    android:background="@drawable/bg_login_input"
+                    android:textSize="15sp"
+                    android:textColor="#1F2937" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Password -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="14dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_password_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_lock"
+                    android:tint="#9CA3AF"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="14dp" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="46dp"
+                    android:paddingVertical="14dp"
+                    android:hint="Buat Kata Sandi"
+                    android:inputType="textPassword"
+                    android:background="@drawable/bg_login_input"
+                    android:textSize="15sp"
+                    android:textColor="#1F2937" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Konfirmasi Password -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="14dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_confirm_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_lock"
+                    android:tint="#9CA3AF"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="14dp" />
+
+                <EditText
+                    android:id="@+id/et_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="46dp"
+                    android:paddingVertical="14dp"
+                    android:hint="Konfirmasi Kata Sandi"
+                    android:inputType="textPassword"
+                    android:background="@drawable/bg_login_input"
+                    android:textSize="15sp"
+                    android:textColor="#1F2937" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Terms & Conditions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <CheckBox
+                android:id="@+id/cb_terms"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="12dp"
+                android:buttonTint="#1A73E8" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Saya menyetujui Syarat dan Ketentuan."
+                android:textColor="#4B5563"
+                android:textSize="13sp"
+                android:layout_marginLeft="12dp"
+                android:lineSpacingExtra="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Syarat dan Ketentuan"
+                    android:textColor="#1A73E8"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/tv_terms" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" dan "
+                    android:visibility="gone"
+                    android:textColor="#4B5563"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kebijakan Privasi"
+                    android:textColor="#1A73E8"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/tv_privacy" />
+            
+        </LinearLayout>
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:backgroundTint="#1A73E8"
+            android:text="📝 Daftar Sekarang"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:drawablePadding="8dp"
+            android:elevation="4dp"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+
+    <!-- ===== DIVIDER ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginVertical="10dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#E5E7EB" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="atau daftar dengan"
+            android:textColor="#9CA3AF"
+            android:textSize="13sp"
+            android:paddingHorizontal="16dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#E5E7EB" />
+    </LinearLayout>
+
+    <!-- ===== SOCIAL LOGIN ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <!-- Google -->
+        <Button
+            android:id="@+id/btn_google"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_social_button"
+            android:drawableLeft="@drawable/ic_google"
+            android:text=" Google"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <!-- Apple -->
+        <Button
+            android:id="@+id/btn_apple"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_social_button"
+            android:drawableLeft="@drawable/ic_apple"
+            android:text=" Apple"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <!-- Facebook -->
+        <Button
+            android:id="@+id/btn_facebook"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_social_button"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:text=" Facebook"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- ===== LOGIN LINK ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sudah punya akun? "
+            android:textColor="#6B7280"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masuk sekarang"
+            android:textColor="#1A73E8"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

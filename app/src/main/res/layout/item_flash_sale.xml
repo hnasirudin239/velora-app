@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="130dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="8dp">
+
+        <!-- ===== GAMBAR ===== -->
+        <!-- ✅ Hapus android:layout_aspectRatio, ganti dengan ukuran fixed -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:background="#F9FAFB">
+
+            <ImageView
+                android:id="@+id/iv_flash_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <!-- Badge Diskon -->
+            <TextView
+                android:id="@+id/tv_discount_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="#DC2626"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="1dp"
+                android:text="50%"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <!-- ===== HARGA ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/tv_flash_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 150.000"
+                android:textColor="#DC2626"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_flash_original_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Rp 300.000"
+                android:textColor="#9CA3AF"
+                android:textSize="10sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- ===== PROGRESS BAR ===== -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#E5E7EB"
+            android:layout_marginTop="4dp">
+
+            <View
+                android:id="@+id/v_progress_fill"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#DC2626" />
+        </FrameLayout>
+
+        <!-- ===== TERJUAL ===== -->
+        <TextView
+            android:id="@+id/tv_flash_sold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Terjual 1.2rb+"
+            android:textColor="#6B7280"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ============================================ -->
+    <!-- ✅ PERMISSION YANG DIBUTUHKAN APLIKASI       -->
+    <!-- ============================================ -->
+
+    <!-- 1. VIBRATE - Untuk haptic feedback (wajib) -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 2. INTERNET - Untuk akses API/backend (wajib untuk e-commerce) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 3. ACCESS_NETWORK_STATE - Untuk cek koneksi internet -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 4. POST_NOTIFICATIONS - Untuk notifikasi (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- 5. FOREGROUND_SERVICE - Untuk layanan background -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- 6. WAKE_LOCK - Untuk menjaga device tetap aktif saat proses penting -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 7. READ_EXTERNAL_STORAGE - Untuk membaca gambar (jika perlu upload foto) -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    
+    <!-- 8. WRITE_EXTERNAL_STORAGE - Untuk menyimpan gambar (jika perlu) -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 9. CAMERA - Untuk scan QR / upload foto (jika diperlukan) -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- ============================================ -->
+    <!-- ✅ APLIKASI                                   -->
+    <!-- ============================================ -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/n"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/n"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Product Detail Activity -->
+        <activity
+            android:name=".ProductDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Cart Activity (Jika masih digunakan) -->
+        <activity
+            android:name=".CartActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".CheckoutActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".OrderHistoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".OrderDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".AddressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".AddressFormActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+            <!-- Jika ini adalah launcher, tambahkan intent-filter -->
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".MyPointActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".MyVoucherActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".CheckoutSuccessActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".PostReviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

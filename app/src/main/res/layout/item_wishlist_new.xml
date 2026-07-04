@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="2dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="14dp">
+
+        <!-- ===== GAMBAR + TOMBOL HAPUS ===== -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F9FAFB">
+
+            <ImageView
+                android:id="@+id/iv_product_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <!-- Tombol Hapus di Pojok Kanan Atas -->
+            <ImageButton
+                android:id="@+id/btn_delete"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_gravity="top|end"
+                android:src="@drawable/ic_delete"
+                android:background="@drawable/bg_delete_button"
+                android:padding="6dp"
+                android:contentDescription="Hapus dari favorit" />
+        </FrameLayout>
+
+        <!-- ===== NAMA PRODUK ===== -->
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Nama Produk"
+            android:textColor="#1F2937"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <!-- ===== HARGA ===== -->
+        <TextView
+            android:id="@+id/tv_product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rp 100.000"
+            android:textColor="#DC2626"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp" />
+
+        <!-- ===== RATING & TERJUAL ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="12dp">
+
+            <RatingBar
+                android:id="@+id/rb_rating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:progressTint="#FBBF24" />
+
+            <TextView
+                android:id="@+id/tv_rating_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="4.8"
+                android:textColor="#6B7280"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_sold_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="(1289+)"
+                android:textColor="#6B7280"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- ===== TOMBOL TAMBAH KE KERANJANG ===== -->
+        <Button
+            android:id="@+id/btn_add_cart"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="🛒 Tambah"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:backgroundTint="#1A73E8"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="0dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

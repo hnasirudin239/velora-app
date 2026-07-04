@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_marginEnd="8dp"
+    android:background="#F3F4F6">
+
+    <ImageView
+        android:id="@+id/iv_media_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/tv_video_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="4dp"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:background="#80000000"
+        android:text="🎬"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/btn_remove_media"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="4dp"
+        android:src="@drawable/ic_close"
+        android:background="#80000000"
+        android:tint="#FFFFFF"
+        android:padding="2dp"
+        android:contentDescription="Hapus" />
+
+</FrameLayout>
